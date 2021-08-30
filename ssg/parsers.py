@@ -30,7 +30,7 @@ class Parser:
         shutil.copy2(path, dest / path.relative_to(source))
 
 
-class MarkdownParser:
+class MarkdownParser(Parser):
     extensions = [".md", ".markdown"]
 
     def parse(self, path: Path, source: Path, dest: Path):  # Annotations to make the arguments Path type
