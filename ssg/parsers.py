@@ -41,7 +41,7 @@ class MarkdownParser(Parser):
         raise NotImplementedError
 
 
-class ReStructuredTextParser:
+class ReStructuredTextParser(Parser):
     extensions = [".rst"]
 
     def parse(self, path: Path, source: Path, dest: Path):  # Annotations to make the arguments Path type
